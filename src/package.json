@@ -1,0 +1,12 @@
+{
+  "name": "MobCafe",
+  "version": "1.0.0",
+  "description": "Alexa enabled MobCafe service",
+  "main": "index.js",
+  "dependencies": {
+    "alexa-sdk": "^1.0.9",
+    "http": "0.0.0"
+  },
+  "devDependencies": {},
+  "author": "sdeshmukh@mobiquityinc.com"
+}
