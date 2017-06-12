@@ -1,0 +1,198 @@
+{
+  "intents": [
+    {
+      "name": "AMAZON.AddAction<object@Book,targetCollection@ReadingList>"
+    },
+    {
+      "name": "AMAZON.CancelIntent",
+      "samples": []
+    },
+    {
+      "name": "AMAZON.ChooseAction<object@Book,sourceCollection@ReadingList>"
+    },
+    {
+      "name": "AMAZON.HelpIntent",
+      "samples": []
+    },
+    {
+      "name": "AMAZON.StopIntent",
+      "samples": []
+    },
+    {
+      "name": "AuthIntent",
+      "samples": [
+        "id is {userId}  and password is {pin} ",
+        "id is {userId} "
+      ],
+      "slots": [
+        {
+          "name": "pin",
+          "type": "AMAZON.NUMBER",
+          "samples": []
+        },
+        {
+          "name": "userId",
+          "type": "AMAZON.NUMBER",
+          "samples": []
+        }
+      ]
+    },
+    {
+      "name": "AuthPinIntent",
+      "samples": [
+        "Pin is {pin} ",
+        "My pin is {pin} "
+      ],
+      "slots": [
+        {
+          "name": "pin",
+          "type": "AMAZON.NUMBER",
+          "samples": []
+        }
+      ]
+    },
+    {
+      "name": "BuyIntent",
+      "samples": [
+        "buy {item} ",
+        "get {quantity} {item} ",
+        "buy {quantity}  {item} for {userId} ",
+        "{userId}  wants to buy {quantity} {item} ",
+        "book {quantity} {item} "
+      ],
+      "slots": [
+        {
+          "name": "item",
+          "type": "itemType",
+          "samples": []
+        },
+        {
+          "name": "quantity",
+          "type": "AMAZON.NUMBER",
+          "samples": []
+        },
+        {
+          "name": "userId",
+          "type": "AMAZON.NUMBER",
+          "samples": []
+        }
+      ]
+    },
+    {
+      "name": "GetAmountIntent",
+      "samples": [
+        "amount is {amount} "
+      ],
+      "slots": [
+        {
+          "name": "amount",
+          "type": "AMAZON.NUMBER",
+          "samples": []
+        }
+      ]
+    },
+    {
+      "name": "GetMyDueIntent",
+      "samples": [
+        "get my due status",
+        "what is my due amount"
+      ],
+      "slots": [
+        {
+          "name": "userId",
+          "type": "AMAZON.NUMBER",
+          "samples": []
+        }
+      ]
+    },
+    {
+      "name": "GetNumIntent",
+      "samples": [
+        "it is {anyNum} ",
+        "{anyNum} "
+      ],
+      "slots": [
+        {
+          "name": "anyNum",
+          "type": "AMAZON.NUMBER",
+          "samples": []
+        }
+      ]
+    },
+    {
+      "name": "GetUserDueIntent",
+      "samples": [
+        "get due amount for {userCode} ",
+        "get due amount of {userCode} "
+      ],
+      "slots": [
+        {
+          "name": "userCode",
+          "type": "AMAZON.NUMBER",
+          "samples": []
+        }
+      ]
+    },
+    {
+      "name": "MakePaymentIntent",
+      "samples": [
+        "Make payment of {userCode} ",
+        "Accept payment of  {userCode}"
+      ],
+      "slots": [
+        {
+          "name": "amount",
+          "type": "AMAZON.NUMBER",
+          "samples": []
+        },
+        {
+          "name": "userCode",
+          "type": "AMAZON.NUMBER",
+          "samples": []
+        }
+      ]
+    }
+  ],
+  "types": [
+    {
+      "name": "itemType",
+      "values": [
+        {
+          "name": {
+            "value": "lays"
+          }
+        },
+        {
+          "name": {
+            "value": "coke"
+          }
+        },
+        {
+          "name": {
+            "value": "kurkure"
+          }
+        },
+        {
+          "name": {
+            "value": "coffee"
+          }
+        },
+        {
+          "name": {
+            "value": "maza"
+          }
+        },
+        {
+          "name": {
+            "value": "kitkat"
+          }
+        },
+        {
+          "name": {
+            "value": "goodday"
+          }
+        }
+      ]
+    }
+  ]
+}
